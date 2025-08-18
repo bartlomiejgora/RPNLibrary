@@ -9,6 +9,8 @@ import java.util.Map;
  * @see RPNChecker
  */
 public class RPNCheckerFactory {
+    private RPNCheckerFactory() {
+    }
 
     /**
      * Creates new RPNChecker instance with default operators,and functions

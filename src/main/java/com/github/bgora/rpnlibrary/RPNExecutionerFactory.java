@@ -13,6 +13,9 @@ import java.util.Map;
  * @see RPNExecutioner
  */
 public class RPNExecutionerFactory {
+    private RPNExecutionerFactory() {
+    }
+
     /**
      * Creates new RPNExecutioner instance with default operators,and functions
      * <p>
@@ -35,7 +38,6 @@ public class RPNExecutionerFactory {
      *
      * @param operators Map containing AbstractOperatorStrategy identified by it's operator
      * @param functions Map containing AbstractFunctionStrategy identified by it's name
-     *
      * @return RPNExecutioner
      */
     public static RPNExecutioner createRPNExecutioner(
@@ -45,10 +47,9 @@ public class RPNExecutionerFactory {
 
     /**
      * Creates new RPNExecutioner instance with given operations and functions, also keeping the default one
-     *<p>
+     *
      * @param operators Map containing AbstractOperatorStrategy identified by it's operator
      * @param functions Map containing AbstractFunctionStrategy identified by it's name
-     *
      * @return RPNExecutioner
      */
     public static RPNExecutioner createRPNExecutionerWithDefaults(
@@ -57,11 +58,11 @@ public class RPNExecutionerFactory {
         DefaultFunctionProvider functionProvider = new DefaultFunctionProvider();
 
         Map<String, AbstractOperatorStrategy> defaultOperators = operatorsProvider.getOperators();
-        if(!operators.isEmpty()){
+        if (!operators.isEmpty()) {
             defaultOperators.putAll(operators);
         }
         Map<String, AbstractFunctionStrategy> defaultFunctions = functionProvider.getFunctions();
-        if(!functions.isEmpty()){
+        if (!functions.isEmpty()) {
             defaultFunctions.putAll(functions);
         }
 
