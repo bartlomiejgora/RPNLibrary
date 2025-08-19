@@ -44,11 +44,11 @@ example:
 Maven:
 ===
 ```
-        <dependency>
-            <groupId>com.github.bartlomiej-gora</groupId>
-            <artifactId>RPNLibrary</artifactId>
-            <version>5.1.0</version>
-        </dependency>
+<dependency>
+    <groupId>io.github.bartlomiejgora</groupId>
+    <artifactId>RPNLibrary</artifactId>
+    <version>5.1.0</version>
+</dependency>
 ```
 
 
